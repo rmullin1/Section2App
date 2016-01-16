@@ -109,6 +109,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //added by RWM
+
+    private int count = 0;
+
     public void buttonOnClick(View v) {
         Button button=(Button) v;
         button.setText("I've Been Clicked!");
@@ -116,4 +119,21 @@ public class MainActivity extends AppCompatActivity {
                 findViewById(R.id.textView);
         myTextView.setText("You Clicked My Button!");
     }
+
+    public void btnPlus_OnClick(View v) {
+        Button button=(Button) v;
+        TextView myTextView=(TextView)
+                findViewById(R.id.textView);
+        count += 1;
+        myTextView.setText(Integer.toString(count));
+    }
+
+    public void btnMinus_OnClick(View v) {
+        Button button=(Button) v;
+        TextView myTextView=(TextView)
+                findViewById(R.id.textView);
+        count -= 1;
+        myTextView.setText(Integer.toString(count));
+    }
+
 }
